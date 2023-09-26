@@ -236,8 +236,8 @@ button:focus {
 
 #videoiframe {
 	/*border: 2px solid #2897d7;*/
-	border: 0px solid #5400ff00;
-   border-radius: 10px;
+/* 	border: 0px solid #5400ff00; */
+/*    border-radius: 10px; */
 }
 
 .block__column__right {
@@ -248,7 +248,7 @@ button:focus {
 
 #ppb-2, #ppb-3 {
 	border-top: 1px solid #ffff;
-	border-left: 2px solid #ffff;
+	border-left: 1px solid #ffff;
 	border-right: 1px solid #ffff;
    flex-grow: 1;
 }
