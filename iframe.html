@@ -106,6 +106,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             // Получаем размеры фрейма
             var frameWidth = frame.offsetWidth;
             var frameHeight = frame.offsetHeight;
+          console.log(frameWidth);
+          console.log(frameHeight);
 
             // Вычисляем координаты для клика с смещением
             var xOffset = 3; // Смещение влево на 3 пикселя
@@ -126,6 +128,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             // Отображаем координаты клика
             var coordinatesElement = document.getElementById('coordinates');
             coordinatesElement.innerText = 'Клик выполнен по координатам X: ' + x + ', Y: ' + y;
+          console.log(x);
+          console.log(y);
         }
 
         // Обработчик события клика на кнопке
