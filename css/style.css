@@ -189,9 +189,9 @@ button:focus {
 	flex-basis: 12%;
 }
 
-#ads-1,
-#ads-2,
-#ads-3 {
+#ppb-1,
+#ppb-2,
+#ppb-3 {
     flex: 1; /* Равномерное распределение в рамках контейнера */
     box-sizing: border-box; /* Учтем отступы внутри ширины баннера */
     overflow: hidden; /* Обрезка изображения, если оно не помещается */
@@ -222,10 +222,10 @@ button:focus {
    border: 1px solid #ffff;
    height: 45.5vh;
 }
-#ads-1 {
+#ppb-1 {
    flex-grow: 1;
 }
-#ads-2, #ads-3 {
+#ppb-2, #ppb-3 {
    height: 50vh;
 }
 
@@ -246,14 +246,14 @@ button:focus {
 }
 
 
-#ads-2, #ads-3 {
+#ppb-2, #ppb-3 {
 	border-top: 1px solid #ffff;
 	border-left: 1px solid #ffff;
 	border-right: 1px solid #ffff;
    flex-grow: 1;
 }
 
-#ads-4, #ads-5, #ads-6, #ads-7, #ads-8, #ads-9 {
+#ppb-4, #ppb-5, #ppb-6, #ppb-7, #ppb-8, #ppb-9 {
 	border: 1px solid #ffff;
    flex-grow: 1;
 }
@@ -306,33 +306,33 @@ button:focus {
     align-items: center; /* Выравнивание по вертикали по центру, если это необходимо */
 }
 
-#ads-4,
-#ads-5,
-#ads-6,
-#ads-7,
-#ads-8,
-#ads-9 {
+#ppb-4,
+#ppb-5,
+#ppb-6,
+#ppb-7,
+#ppb-8,
+#ppb-9 {
     flex: 1; /* Равномерное распределение в рамках контейнера */
     max-width: 16.66%; /* Максимальная ширина для каждого баннера (100% / 6) */
     box-sizing: border-box; /* Учтем отступы внутри ширины баннера */
     overflow: hidden; /* Обрезка изображения, если оно не помещается */
 }
 
-#ads-1 img,
-#ads-2 img,
-#ads-3 img,
-#ads-4 img,
-#ads-5 img,
-#ads-6 img,
-#ads-7 img,
-#ads-8 img,
-#ads-9 img {
+#ppb-1 img,
+#ppb-2 img,
+#ppb-3 img,
+#ppb-4 img,
+#ppb-5 img,
+#ppb-6 img,
+#ppb-7 img,
+#ppb-8 img,
+#ppb-9 img {
     width: 100%; /* Изображение занимает всю ширину контейнера */
     height: auto; /* Сохранение пропорций изображения */
     z-index: 9999;
 }
 
-#ads-10 {
+#ppb-10 {
 	 border: 1px solid white;
 }
 
@@ -382,7 +382,7 @@ display: none !important;
    /*margin-bottom: 10px;*/
  }
 
-#ads-4, #ads-5, #ads-6, #ads-7, #ads-8, #ads-9 {
+#ppb-4, #ppb-5, #ppb-6, #ppb-7, #ppb-8, #ppb-9 {
 	max-width: 100% !important;
 	width: 100%;
  }
