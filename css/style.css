@@ -210,7 +210,7 @@ button:focus {
 
 }
 
-#ads-1 {
+.block__column_ads {
    border: 1px solid #ffff;
    height: 45.5vh;
 }
