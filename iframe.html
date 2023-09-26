@@ -76,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div id="container" class="block__column__center">
         
 <button id="clickButton">Нажмите для клика</button>
-    <iframe id="targetFrame" src="ваш_сайт_в_фрейме.html"></iframe>
+    <div id="coordinates"></div> <!-- Добавляем элемент для отображения координат -->
         
         <div id="play"><button id="toggleCinemaMode" onclick="toggleCinemaMode()">Режим кинотеатра</button></iframe> </div>
       </div>
@@ -101,7 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         // Функция для выполнения клика в нижнем правом углу фрейма с смещением
         function clickWithOffset() {
             // Получаем элемент фрейма
-            var frame = document.getElementById('play');
+            var frame = document.getElementById('videoiframe');
 
             // Получаем размеры фрейма
             var frameWidth = frame.offsetWidth;
@@ -122,6 +122,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             // Диспетчеризируем событие в фрейме
             frame.contentWindow.document.elementFromPoint(x, y).dispatchEvent(clickEvent);
+
+            // Отображаем координаты клика
+            var coordinatesElement = document.getElementById('coordinates');
+            coordinatesElement.innerText = 'Клик выполнен по координатам X: ' + x + ', Y: ' + y;
         }
 
         // Обработчик события клика на кнопке
