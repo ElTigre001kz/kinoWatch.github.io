@@ -74,7 +74,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div id="container" class="block__column__center">
-<button id="fullscreenButton">Нажать на fullscreen13</button> 
+        
+<button id="clickButton">Нажмите для клика</button>
+    <iframe id="targetFrame" src="ваш_сайт_в_фрейме.html"></iframe>
+        
         <div id="play"><button id="toggleCinemaMode" onclick="toggleCinemaMode()">Режим кинотеатра</button></iframe> </div>
       </div>
       <div class="block__column__right">
@@ -94,23 +97,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="branding"></div>
 <div class="sticker"></div>
 
- <script>
-    // Функция для нажатия на элемент с id="fullscreen13"
-    function clickFullscreen13() {
-      var fullscreen13Element = document.getElementById('fullscreen13');
-      if (fullscreen13Element) {
-        fullscreen13Element.click();
-      } else {
-        alert('Элемент с id="fullscreen13" не найден.');
-      }
-    }
+<script>
+        // Функция для выполнения клика в нижнем правом углу фрейма с смещением
+        function clickWithOffset() {
+            // Получаем элемент фрейма
+            var frame = document.getElementById('play');
 
-    // Обработчик события для кнопки
-    var fullscreenButton = document.getElementById('fullscreenButton');
-    if (fullscreenButton) {
-      fullscreenButton.addEventListener('click', clickFullscreen13);
-    }
-  </script>
+            // Получаем размеры фрейма
+            var frameWidth = frame.offsetWidth;
+            var frameHeight = frame.offsetHeight;
+
+            // Вычисляем координаты для клика с смещением
+            var xOffset = 3; // Смещение влево на 3 пикселя
+            var yOffset = 10; // Смещение вверх на 10 пикселей
+            var x = frameWidth - xOffset;
+            var y = frameHeight - yOffset;
+
+            // Создаем искусственное событие клика
+            var clickEvent = new MouseEvent('click', {
+                'view': window,
+                'bubbles': true,
+                'cancelable': true
+            });
+
+            // Диспетчеризируем событие в фрейме
+            frame.contentWindow.document.elementFromPoint(x, y).dispatchEvent(clickEvent);
+        }
+
+        // Обработчик события клика на кнопке
+        document.getElementById('clickButton').addEventListener('click', clickWithOffset);
+    </script>
   
 <script src="js/kinoRoom.js" type="text/javascript"></script>
 </body>
