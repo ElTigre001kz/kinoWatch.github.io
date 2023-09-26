@@ -74,7 +74,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div id="container" class="block__column__center">
-<button id="showButton">Показать видео</button>
+
         <div id="play"><button id="toggleCinemaMode" onclick="toggleCinemaMode()">Режим кинотеатра</button></iframe> </div>
       </div>
       <div class="block__column__right">
@@ -93,53 +93,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 <div class="branding"></div>
 <div class="sticker"></div>
-
-  <script>
-    const showButton = document.getElementById('showButton');
-    let video;
-
-    showButton.addEventListener('click', () => {
-      // Создать видео-элемент и установить атрибуты и источник видео
-      video = document.createElement('player');
-      video.setAttribute('controls', true);
-      video.innerHTML = 'Ваш браузер не поддерживает видео-тег.';
-      video.src = 'ваш_видео.mp4';
-
-      // Скрыть кнопку и вставить видео в полноэкранный div
-      showButton.style.display = 'none';
-      video.style.width = '100%';
-      video.style.height = '100%';
-      document.body.appendChild(video);
-
-      // Вход в полноэкранный режим
-      if (video.requestFullscreen) {
-        video.requestFullscreen();
-      } else if (video.mozRequestFullScreen) { /* Firefox */
-        video.mozRequestFullScreen();
-      } else if (video.webkitRequestFullscreen) { /* Chrome, Safari, and Opera */
-        video.webkitRequestFullscreen();
-      } else if (video.msRequestFullscreen) { /* IE/Edge */
-        video.msRequestFullscreen();
-      }
-
-      // Воспроизвести видео
-      video.play();
-    });
-
-    // Обработчик события для выхода из полноэкранного режима
-    document.addEventListener('fullscreenchange', exitFullScreenHandler);
-    document.addEventListener('webkitfullscreenchange', exitFullScreenHandler);
-    document.addEventListener('mozfullscreenchange', exitFullScreenHandler);
-
-    function exitFullScreenHandler() {
-      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement) {
-        // Пользователь вышел из полноэкранного режима
-        // Переместите видео-элемент обратно в документ
-        showButton.style.display = 'block';
-        document.body.removeChild(video);
-      }
-    }
-  </script>
 
 <script src="js/kinoRoom.js" type="text/javascript"></script>
 </body>
