@@ -87,7 +87,7 @@ body.cinema-mode.active #toggleCinemaMode:hover {
 .cinema-mode::after {
   content: "";
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
   top: 0;
   left: 0;
