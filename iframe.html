@@ -100,7 +100,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     showButton.addEventListener('click', () => {
       // Создать видео-элемент и установить атрибуты и источник видео
-      video = document.createElement('play');
+      video = document.createElement('videoiframe');
       video.setAttribute('controls', true);
       video.innerHTML = 'Ваш браузер не поддерживает видео-тег.';
       video.src = 'ваш_видео.mp4';
