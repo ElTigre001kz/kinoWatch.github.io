@@ -430,3 +430,45 @@ display: none !important;
     transform: rotate(360deg)scale(1.2);
     /*transition: transform 0.2s*/
   }
+
+/*стили для баннеров  */
+div >ins{
+margin: 0px !important;
+    display: contents !important;
+    text-align: center !important;
+    padding: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+	}
+		ins > ins{
+margin: 0px !important;
+    display: contents !important;
+    text-align: center !important;
+    padding: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+		}
+		ins > div{
+margin: 0px !important;
+    display: contents !important;
+    text-align: center !important;
+    padding: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+		}
+
+		
+ins > div > img{
+        margin: 0px !important;
+        max-width: 100% !important;
+	flex-direction: column !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+	margin-top: 0px !important;
+	}	
+
+ins > ins:first-of-type{
+flex-direction: column !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+	}	
