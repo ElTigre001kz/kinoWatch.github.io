@@ -87,7 +87,7 @@ body.cinema-mode.active #toggleCinemaMode:hover {
 .cinema-mode::after {
   content: "";
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
   top: 0;
   left: 0;
@@ -189,12 +189,39 @@ button:focus {
 	flex-basis: 9%;
 }
 
-#ppb-1,
+.block__column__down {
+display: flex;
+  height: 45.5vh;
+ }
+
+#ppb-1{
+	flex: 1; /* Равномерное распределение в рамках контейнера */
+    box-sizing: border-box; /* Учтем отступы внутри ширины баннера */
+    overflow: hidden;
+  /*margin: 0px 15px;*/
+       display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    border-top: 1px solid #ffff;
+	border-left: 1px solid #ffff;
+	border-right: 1px solid #ffff;
+}
+
 #ppb-2,
 #ppb-3 {
     flex: 1; /* Равномерное распределение в рамках контейнера */
     box-sizing: border-box; /* Учтем отступы внутри ширины баннера */
     overflow: hidden; /* Обрезка изображения, если оно не помещается */
+    height: 50vh;
+   /*margin: 0px 15px;*/
+       display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    /*border: 1px solid #ffff;*/
+    border-top: 1px solid #ffff;
+	border-left: 1px solid #ffff;
+	border-right: 1px solid #ffff;
+	/*border-bottom: 1px solid #ffff;*/
 }
 
 .block__column_logo {
@@ -218,16 +245,6 @@ button:focus {
 
 }
 
-.block__column__down {
-   border: 1px solid #ffff;
-   height: 45.5vh;
-}
-#ppb-1 {
-   flex-grow: 1;
-}
-#ppb-2, #ppb-3 {
-   height: 50vh;
-}
 
 .block__column__center {
 	text-align: center;
@@ -236,8 +253,8 @@ button:focus {
 
 #videoiframe {
 	/*border: 2px solid #2897d7;*/
-/* 	border: 0px solid #5400ff00; */
-/*    border-radius: 10px; */
+	border: 0px solid #5400ff00;
+   border-radius: 10px;
 }
 
 .block__column__right {
@@ -245,13 +262,14 @@ button:focus {
 	flex-basis: 9%;
 }
 
-
+/*
 #ppb-2, #ppb-3 {
 	border-top: 1px solid #ffff;
-	border-left: 2px solid #ffff;
+	border-left: 1px solid #ffff;
 	border-right: 1px solid #ffff;
+	border-bottom: 1px solid #ffff;
    flex-grow: 1;
-}
+}*/
 
 #ppb-4, #ppb-5, #ppb-6, #ppb-7, #ppb-8, #ppb-9 {
 	border: 1px solid #ffff;
@@ -409,7 +427,7 @@ display: none !important;
     /* box-shadow: 0px 0px 32px -7px #00199f; */
     box-shadow: 0px 7px 60px -7px #5c009f;
 }
-	
+
 }
 
 
@@ -472,3 +490,7 @@ flex-direction: column !important;
     justify-content: center !important;
     overflow: hidden !important;
 	}	
+
+
+
+
