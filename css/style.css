@@ -186,7 +186,7 @@ button:focus {
 
 .block__column__left {
    text-align: center;
-	flex-basis: 12%;
+	flex-basis: 9%;
 }
 
 #ppb-1,
@@ -231,7 +231,7 @@ button:focus {
 
 .block__column__center {
 	text-align: center;
-	flex-basis: 76%;
+	flex-basis: 83%;
 }
 
 #videoiframe {
@@ -242,7 +242,7 @@ button:focus {
 
 .block__column__right {
 	text-align: center;
-	flex-basis: 12%;
+	flex-basis: 9%;
 }
 
 
