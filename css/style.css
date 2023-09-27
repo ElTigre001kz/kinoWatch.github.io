@@ -60,7 +60,7 @@ body {
   z-index: 10000;
   transition: background-color 0.4s;
   position: absolute !important;
-  top: 10px; /* Располагаем кнопку сверху с отступом 10px */
+  top: 9px; /* Располагаем кнопку сверху с отступом 10px */
   right: 8px; /* Располагаем кнопку справа с отступом 10px */
 }
 
