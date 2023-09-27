@@ -239,6 +239,12 @@ display: flex;
   align-items: center;
 }
 
+#logo {
+  display: flex;
+  justify-content: center; /* Размещаем по горизонтали по центру */
+  align-items: center;
+}
+
 #logo img{
 	position: inherit;
 	width: 75%;
