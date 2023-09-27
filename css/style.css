@@ -53,7 +53,7 @@ body {
   background-color: #1c2024;
   border: 1px solid #ffff;
   border-radius: 3px;
-  padding: 8px;
+  padding: 9px;
   color: #fff;
   cursor: pointer;
   position: relative;
@@ -76,7 +76,7 @@ body {
   background-color: #148b5e;
   border: 1px solid #ffff;
   border-radius: 3px;
-  padding: 7px;
+  padding: 9px;
 }
 
 body.cinema-mode.active #toggleCinemaMode:hover {
