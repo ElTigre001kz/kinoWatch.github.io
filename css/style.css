@@ -177,8 +177,7 @@ button:focus {
 	/*border: 1px solid #ff7f50;*/
    display: flex;
    flex-direction: row;
-	/*align-items: center;*/
-	aligh-item: flex-center;
+	aligh-item: center;
 }
 
 /*#player{
@@ -300,7 +299,6 @@ display: flex;
 
 .icon {
    padding-bottom: 7px; // отступы между иконками
-   /*transition: transform 0.2s ease;*/
    transition: transform 0.2s;
   transform-origin: center;
 }
