@@ -177,7 +177,7 @@ button:focus {
 	/*border: 1px solid #ff7f50;*/
    display: flex;
    flex-direction: row;
-	aligh-item: center;
+   align-items: center;
 }
 
 /*#player{
