@@ -81,7 +81,9 @@ body {
 
 body.cinema-mode.active #toggleCinemaMode:hover {
     background-color: #6e3233; /* Цвет при наведении, когда body имеет класс cinema-mode и active */
+
 }
+
 
 .cinema-mode::before,
 .cinema-mode::after {
@@ -490,7 +492,3 @@ flex-direction: column !important;
     justify-content: center !important;
     overflow: hidden !important;
 	}	
-
-
-
-
