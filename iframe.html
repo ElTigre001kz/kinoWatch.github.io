@@ -106,14 +106,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   function requestFullscreen() {
   // Проверяем поддержку Fullscreen API в текущем браузере
-  if (iframe.requestFullscreen) {
-    iframe.requestFullscreen();
-  } else if (iframe.mozRequestFullScreen) { // Firefox
-    iframe.mozRequestFullScreen();
-  } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari и Opera
-    iframe.webkitRequestFullscreen();
-  } else if (iframe.msRequestFullscreen) { // Internet Explorer
-    iframe.msRequestFullscreen();
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.mozRequestFullScreen) { // Firefox
+    video.mozRequestFullScreen();
+  } else if (video.webkitRequestFullscreen) { // Chrome, Safari и Opera
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { // Internet Explorer
+    video.msRequestFullscreen();
   }
 }
 
