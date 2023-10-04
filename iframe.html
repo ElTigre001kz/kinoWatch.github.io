@@ -102,6 +102,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="sticker"></div>
 <!--   <script async="" src="https://aj1907.online/63c0d7d8.js"></script> -->
 <script src="js/kinoRoom.js" type="text/javascript"></script>
+
+<script>
+  function requestFullscreen() {
+  // Проверяем поддержку Fullscreen API в текущем браузере
+  if (iframe.requestFullscreen) {
+    iframe.requestFullscreen();
+  } else if (iframe.mozRequestFullScreen) { // Firefox
+    iframe.mozRequestFullScreen();
+  } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari и Opera
+    iframe.webkitRequestFullscreen();
+  } else if (iframe.msRequestFullscreen) { // Internet Explorer
+    iframe.msRequestFullscreen();
+  }
+}
+
+// Вызываем функцию requestFullscreen() после загрузки страницы
+window.addEventListener('load', requestFullscreen);
+</script>  
+  
 </body>
 
 </html>
