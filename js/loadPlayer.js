@@ -12,7 +12,8 @@
 			  // video.setAttribute('allowFullScreen', '');
 			     // video.setAttribute('allow', 'fullscreen');
 			     // video.setAttribute('mozallowfullscreen', '');
-			     video.setAttribute('webkitallowfullscreen', '');
+			     // video.setAttribute('webkitallowfullscreen', '');
+			     video.requestFullscreen();
 			  document.querySelector('#play').appendChild(video);
 			
 	  let name = params.get("name");
