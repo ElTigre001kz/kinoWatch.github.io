@@ -30,7 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/loadPlayer.js" type="text/javascript"></script>
   <script src="js/Viewers.js" type="text/javascript"></script>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script> 
 </head>
 <!-- Отображаемое тело страницы -->
 
@@ -122,6 +121,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 // Вызываем функцию requestFullscreen() после загрузки страницы
 window.addEventListener('load', requestFullscreen);
 </script>   -->
+
+<script type="text/javascript" src="https://telegram.org/js/telegram-web-app.js"></script>
+<script type="text/javascript">
+    // Инициализация Telegram Mini Apps API
+    MiniApp.init();
+
+    // Получение ссылки на видеоплеер
+    const videoPlayer = document.getElementById('play');
+
+    // Регистрация обработчика события на кнопку полноэкранного режима
+    videoPlayer.addEventListener('click', () => {
+        // Запрос на полноэкранный режим
+        MiniApp.enterFullscreen();
+    });
+</script>
   
 </body>
 
