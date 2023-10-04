@@ -28,7 +28,23 @@
 		      
 		window.addEventListener("message", function (event) {
 			if (event.data.event === 'init') {
-				document.getElementById('videoiframe').contentWindow.postMessage({"api": "fullscreen"}, "*");
+				// document.getElementById('videoiframe').contentWindow.postMessage({"api": "fullscreen"}, "*");
+				let iframe = document.getElementById('videoiframe');
+
+// Функция для запроса полноэкранного режима
+function requestFullscreen() {
+  if (iframe.requestFullscreen) {
+    iframe.requestFullscreen();
+  } else if (iframe.mozRequestFullScreen) { // Firefox
+    iframe.mozRequestFullScreen();
+  } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari и Opera
+    iframe.webkitRequestFullscreen();
+  } else if (iframe.msRequestFullscreen) { // Internet Explorer
+    iframe.msRequestFullscreen();
+  }
+}
+// Вызываем функцию requestFullscreen() на событии клика (или другом событии) на мобильном устройстве
+iframe.addEventListener('click', requestFullscreen);
 	
 			}
  		});
