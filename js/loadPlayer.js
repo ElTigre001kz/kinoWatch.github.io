@@ -11,9 +11,28 @@
 			  video.height = '100%';
 			  // video.setAttribute('allowFullScreen', '');
 			     // video.setAttribute('allow', 'fullscreen');
-			     // video.setAttribute('mozallowfullscreen', '');
-			     // video.setAttribute('webkitallowfullscreen', '');
-			     video.requestFullscreen();
+			     // Получаем ссылку на iframe и элемент с id "play"
+let iframe = document.querySelector('iframe');
+let playButton = document.getElementById('play');
+
+// Функция для запроса полноэкранного режима
+function requestFullscreen() {
+  // Проверяем поддержку Fullscreen API в текущем браузере
+  if (iframe.requestFullscreen) {
+    iframe.requestFullscreen();
+  } else if (iframe.mozRequestFullScreen) { // Firefox
+    iframe.mozRequestFullScreen();
+  } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari и Opera
+    iframe.webkitRequestFullscreen();
+  } else if (iframe.msRequestFullscreen) { // Internet Explorer
+    iframe.msRequestFullscreen();
+  }
+}
+
+// Добавляем обработчики событий для iframe и кнопки "play"
+iframe.addEventListener('click', requestFullscreen);
+playButton.addEventListener('click', requestFullscreen);
+			     
 			  document.querySelector('#play').appendChild(video);
 			
 	  let name = params.get("name");
