@@ -43,8 +43,11 @@ function requestFullscreen() {
     iframe.msRequestFullscreen();
   }
 }
-// Вызываем функцию requestFullscreen() на событии клика (или другом событии) на мобильном устройстве
-iframe.addEventListener('click', requestFullscreen);
+
+// Вызываем функцию requestFullscreen() после загрузки iframe
+iframe.addEventListener('load', requestFullscreen);
+
+				
 	
 			}
  		});
