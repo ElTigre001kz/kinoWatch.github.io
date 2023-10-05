@@ -110,6 +110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         // Получение ссылки на видеоплеер
         const videoPlayer = document.getElementById('play');
         tg.expand()
+  tg.enterFullscreen();
         // Регистрация обработчика события на кнопку полноэкранного режима
         videoPlayer.addEventListener('click', () => {
             // Запрос на полноэкранный режим
