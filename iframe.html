@@ -122,14 +122,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   let element = document.getElementById('toggleCinemaMode');
 
 element.addEventListener('mouseover', function() {
-  // Очистка таймера, чтобы элемент не скрывался, если курсор вернулся на элемент
   clearTimeout(hideTimeout);
 });
 
 let hideTimeout;
 
 element.addEventListener('mouseout', function() {
-  // Задержка выполнения функции на 3 секунды
+  hideTimeout = setTimeout(function() {
+    element.style.display = 'none';
+  }, 3000);
+});
+
+element.addEventListener('mouseenter', function() {
+  element.style.display = 'block';
+  clearTimeout(hideTimeout);
+});
+
+element.addEventListener('mouseleave', function() {
   hideTimeout = setTimeout(function() {
     element.style.display = 'none';
   }, 3000);
