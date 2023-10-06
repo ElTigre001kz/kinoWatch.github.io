@@ -118,32 +118,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             // TelegramWebApp.enterFullscreen();
         });
     </script>
-<script>
-  let element = document.getElementById('toggleCinemaMode');
 
-element.addEventListener('mouseover', function() {
-  clearTimeout(hideTimeout);
-});
-
-let hideTimeout;
-
-element.addEventListener('mouseout', function() {
-  hideTimeout = setTimeout(function() {
-    element.style.display = 'none';
-  }, 3000);
-});
-
-element.addEventListener('mouseenter', function() {
-  element.style.display = 'block';
-  clearTimeout(hideTimeout);
-});
-
-element.addEventListener('mouseleave', function() {
-  hideTimeout = setTimeout(function() {
-    element.style.display = 'none';
-  }, 3000);
-});
-  </script>
 </body>
 
 </html>
