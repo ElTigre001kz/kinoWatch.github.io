@@ -118,7 +118,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             // TelegramWebApp.enterFullscreen();
         });
     </script>
+<script>
+const playButton = document.getElementById('play');
+const toggleCinemaModeButton = document.getElementById('toggleCinemaMode');
 
+// Добавляем обработчики событий для отображения и скрытия кнопки toggleCinemaMode
+playButton.addEventListener('mouseover', function() {
+  toggleCinemaModeButton.style.display = 'block';
+});
+
+playButton.addEventListener('mouseout', function() {
+  toggleCinemaModeButton.style.display = 'none';
+});
+  </script>
 </body>
 
 </html>
