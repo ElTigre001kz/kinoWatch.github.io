@@ -93,7 +93,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 <div class="branding"></div>
 <div class="sticker"></div>
+<button id="fullscreenButton" class="fullscreen-button">В полноэкранный режим</button>
 
+    <script>
+        var videoPlayer = document.getElementById('yourVideoPlayerId');
+        
+        function enterFullscreen() {
+            if (videoPlayer.requestFullscreen) {
+                videoPlayer.requestFullscreen();
+            } else if (videoPlayer.mozRequestFullScreen) {
+                videoPlayer.mozRequestFullScreen();
+            } else if (videoPlayer.webkitRequestFullscreen) {
+                videoPlayer.webkitRequestFullscreen();
+            } else if (videoPlayer.msRequestFullscreen) {
+                videoPlayer.msRequestFullscreen();
+            }
+        }
+
+        document.getElementById('fullscreenButton').addEventListener('click', enterFullscreen);
+    </script>
 <script src="js/kinoRoom.js" type="text/javascript"></script>
 </body>
 
