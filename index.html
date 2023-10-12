@@ -117,14 +117,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script type="text/javascript" src="https://telegram.org/js/telegram-web-app.js"></script>
   <script type="text/javascript">
     // Дождитесь загрузки Telegram WebApp
-    window.Telegram.WebApp.on('tgready', () => {
+    let tg = window.Telegram.WebApp.on('tgready', () => {
         // Получение ссылки на видеоплеер
         const videoPlayer = document.getElementById('play');
 
         // Регистрация обработчика события на кнопку полноэкранного режима
         videoPlayer.addEventListener('click', () => {
             // Запрос на полноэкранный режим
-            window.Telegram.WebApp.enterFullscreen();
+            tg = window.Telegram.WebApp.enterFullscreen();
         });
     });
 </script>
@@ -134,6 +134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const videoPlayer = document.getElementById('play');
         tg.expand()
   tg.enterFullscreen();
+  window.Telegram.WebApp.enterFullscreen();
         // Регистрация обработчика события на кнопку полноэкранного режима
         videoPlayer.addEventListener('click', () => {
             // Запрос на полноэкранный режим
