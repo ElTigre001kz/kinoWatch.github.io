@@ -115,7 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         document.getElementById('fullscreenButton').addEventListener('click', enterFullscreen);
     </script>
   <script type="text/javascript" src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script type="text/javascript">
+<!--   <script type="text/javascript">
     // Дождитесь загрузки Telegram WebApp
     let tg = window.Telegram.WebApp
      tg.on('tgready', () => {
@@ -129,13 +129,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             tg.enterFullscreen();
         });
     });
-</script>
-<!-- <script type="text/javascript">
+</script> -->
+<script type="text/javascript">
       let tg = window.Telegram.WebApp;
         // Получение ссылки на видеоплеер
         const videoPlayer = document.getElementById('play');
         tg.expand()
-  tg.enterFullscreen();
+  // tg.enterFullscreen();
   window.Telegram.WebApp.enterFullscreen();
         // Регистрация обработчика события на кнопку полноэкранного режима
         videoPlayer.addEventListener('click', () => {
@@ -143,7 +143,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           tg.enterFullscreen();
             // TelegramWebApp.enterFullscreen();
         });
-    </script> -->
+    </script>
 <script src="js/kinoRoom.js" type="text/javascript"></script>
 </body>
 
