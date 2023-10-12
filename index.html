@@ -97,9 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <script>
-      webView.addJavascriptInterface(this, "AndroidWebView")
-AndroidWebView.webViewMethod()
-      webView.settings.javaScriptEnabled = true
+      
         var videoPlayer = document.getElementById('videoiframe');
         
         function enterFullscreen() {
@@ -117,7 +115,20 @@ AndroidWebView.webViewMethod()
         document.getElementById('fullscreenButton').addEventListener('click', enterFullscreen);
     </script>
   <script type="text/javascript" src="https://telegram.org/js/telegram-web-app.js"></script>
-<script type="text/javascript">
+  <script type="text/javascript">
+    // Дождитесь загрузки Telegram WebApp
+    window.Telegram.WebApp.on('tgready', () => {
+        // Получение ссылки на видеоплеер
+        const videoPlayer = document.getElementById('play');
+
+        // Регистрация обработчика события на кнопку полноэкранного режима
+        videoPlayer.addEventListener('click', () => {
+            // Запрос на полноэкранный режим
+            window.Telegram.WebApp.enterFullscreen();
+        });
+    });
+</script>
+<!-- <script type="text/javascript">
       let tg = window.Telegram.WebApp;
         // Получение ссылки на видеоплеер
         const videoPlayer = document.getElementById('play');
@@ -129,7 +140,7 @@ AndroidWebView.webViewMethod()
           tg.enterFullscreen();
             // TelegramWebApp.enterFullscreen();
         });
-    </script>
+    </script> -->
 <script src="js/kinoRoom.js" type="text/javascript"></script>
 </body>
 
